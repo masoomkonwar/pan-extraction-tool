@@ -1,0 +1,10 @@
+#maincontainer{
+    margin: 0;
+    padding: 0;
+    }
+
+#header1{
+
+    border: dashed black 4px;
+    text-align: center;color: rgb(38, 121, 63);text-shadow: 2px;
+    }

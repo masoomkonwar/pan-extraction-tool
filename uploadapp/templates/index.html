@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>
+          PAN CARD DETAILS EXTRACTION
+      </title>
+    </head>
+    <body style="background: azure;">
+      <div class="container-fluid">
+        <div class="row m-3 justify-content-center" style=" font-family: 'Times New Roman', Times, serif; height: 10vh;">
+            <h1> MINI PROJECT 6th SEMESTER</h1>
+        </div>
+        
+       <div class="row m-2 justify-content-center" style="height: 60vh;">
+           <div class="col-lg-6" >
+             <img src="http://127.0.0.1:8000/media/pan.jpg" class="img-fluid"/>
+            </div>
+           <div class="col-lg-6 justify-content-center">
+                <div class="card" style="height: 87%;">
+                    <div class="card-body">
+                        <h3 class="card-title" style="font-family: 'Times New Roman', Times, serif; font-weight: 200;">STEPS TO UPLOAD DOCUMENT:</h3>
+                        <p class="card-text">
+                            <form action="upload" method="POST" enctype="multipart/form-data">
+                              {%csrf_token%}
+                              1. CLICK ON THE BROWSE BUTTON BELOW, TO SELECT YOUR FILE.
+                              <input type="file" name="image" class="text-primary p-2 m-2 rounded" style="background:rgb(223, 198, 119); border: solid black 2px;text-align: center;"> <br>
+                              2. CLICK ON UPLOAD.</br>
+                              <input type="submit" class="btn btn-outline-info m-2" value="upload File">
+                              </form>
+                            </br>3. NOW WAIT FOR THE RESPONSE!
+                            {% if pan %}
+                               <P>pan number is {{pan}}</P>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>        
+            </div>
+        </div> 
+        <footer class=" text-muted text-center" style=" height: 20vh;">
+          <h3 style="text-align: center;" >SUBMITTED BY:</h3>
+          <p class="text-muted" style="font-family: sans-serif; font-weight:inherit;">
+              1. MASOOM KONWAR   (180710007034) <br>
+              2. APEKSHA MODI    (180710007005) <br> 
+              3. AKANGKSHYA PATHAK (180712707001)
+          </p>
+        </footer>
+        
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
